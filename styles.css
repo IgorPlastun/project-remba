@@ -1408,6 +1408,7 @@ h3 {
   position: relative;
   justify-content: space-between;
   min-height: 76vh;
+  overflow: hidden;
   background: linear-gradient(180deg, rgba(40, 54, 31, 0.34), rgba(158, 47, 32, 0.18));
 }
 
@@ -1590,11 +1591,11 @@ h3 {
 
 .rocket-smoke-message {
   position: absolute;
-  left: 36%;
-  bottom: -6%;
-  z-index: 5;
+  left: 50%;
+  bottom: clamp(18px, 4vw, 44px);
+  z-index: 3;
   width: max-content;
-  max-width: 360px;
+  max-width: min(88vw, 620px);
   padding: 12px 18px;
   color: #11100d;
   background: rgba(255, 242, 184, 0.94);
@@ -1613,9 +1614,9 @@ h3 {
   filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.34));
 }
 
-.rocket-launch.is-launched .rocket-smoke-message {
+.final.is-rocket-launched .rocket-smoke-message {
   visibility: visible;
-  animation: smokeMessageReveal 1.2s ease-out 1.8s forwards;
+  animation: smokeMessageReveal 1.2s ease-out 3.2s forwards;
 }
 
 .scroll-head {
@@ -2485,9 +2486,8 @@ h3 {
   }
 
   .rocket-smoke-message {
-    left: 38%;
-    bottom: -8%;
-    max-width: 260px;
+    bottom: 18px;
+    max-width: calc(100vw - 32px);
     padding: 10px 14px;
     font-size: 18px;
   }

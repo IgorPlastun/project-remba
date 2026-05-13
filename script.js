@@ -182,6 +182,7 @@ function updateRocketLaunchVisibility() {
 rocketLaunch?.addEventListener("click", () => {
   rocketLaunch.classList.remove("is-visible");
   rocketLaunch.classList.add("is-launched");
+  finalSection?.classList.add("is-rocket-launched");
 });
 
 window.addEventListener("scroll", updateRocketLaunchVisibility, { passive: true });
