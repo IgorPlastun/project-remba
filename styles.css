@@ -1607,13 +1607,15 @@ h3 {
   text-align: center;
   text-transform: uppercase;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
   transform: translate(-50%, 24px) scale(0.92);
   filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.34));
 }
 
 .rocket-launch.is-launched .rocket-smoke-message {
-  animation: smokeMessageReveal 1.2s ease-out 900ms forwards;
+  visibility: visible;
+  animation: smokeMessageReveal 1.2s ease-out 1.8s forwards;
 }
 
 .scroll-head {
