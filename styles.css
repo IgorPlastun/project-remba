@@ -1591,7 +1591,7 @@ h3 {
 
 .rocket-smoke-message {
   position: absolute;
-  left: 50%;
+  left: calc(50% + 200px);
   bottom: clamp(18px, 4vw, 44px);
   z-index: 3;
   width: max-content;
